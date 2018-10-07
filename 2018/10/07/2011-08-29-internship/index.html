@@ -1,0 +1,1150 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html class="theme-next mist" lang="">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=6.4.2" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.4.2">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.4.2">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.4.2">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.4.2" color="#222">
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '6.4.2',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="2011.5在近物所实习 学到不少东西 谢谢两位指导我的副研和博士先生 ROOT 好吧其实主要是看他们官方的数据结构手册 很详细 还有平兄给我的课件 我就没做多少笔记了= = http://wenku.baidu.com/view/3d9f48c69ec3d5bbfd0a749e.html 数据结构 Histograms Tree Spectrum（peak finder background）">
+<meta name="keywords" content="物理,实习,近物所">
+<meta property="og:type" content="article">
+<meta property="og:title" content="实习笔记">
+<meta property="og:url" content="http://zer0618.github.io/2018/10/07/2011-08-29-internship/index.html">
+<meta property="og:site_name" content="2ER0&#39;s adventure">
+<meta property="og:description" content="2011.5在近物所实习 学到不少东西 谢谢两位指导我的副研和博士先生 ROOT 好吧其实主要是看他们官方的数据结构手册 很详细 还有平兄给我的课件 我就没做多少笔记了= = http://wenku.baidu.com/view/3d9f48c69ec3d5bbfd0a749e.html 数据结构 Histograms Tree Spectrum（peak finder background）">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-10-07T00:43:03.215Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="实习笔记">
+<meta name="twitter:description" content="2011.5在近物所实习 学到不少东西 谢谢两位指导我的副研和博士先生 ROOT 好吧其实主要是看他们官方的数据结构手册 很详细 还有平兄给我的课件 我就没做多少笔记了= = http://wenku.baidu.com/view/3d9f48c69ec3d5bbfd0a749e.html 数据结构 Histograms Tree Spectrum（peak finder background）">
+
+
+
+
+
+
+  <link rel="canonical" href="http://zer0618.github.io/2018/10/07/2011-08-29-internship/"/>
+
+
+
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>实习笔记 | 2ER0's adventure</title>
+  
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="default">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">2ER0's adventure</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="Toggle navigation bar">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+    <a href="/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />Home</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+    <a href="/about/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-user"></i> <br />About</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+    <a href="/tags/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />Tags</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-maphy">
+    <a href="/categories/MaPhy" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-th"></i> <br />MaPhy</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-musik">
+    <a href="/categories/Musik" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-th"></i> <br />Musik</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-sword">
+    <a href="/categories/sword" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-th"></i> <br />Sword</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-compu">
+    <a href="/categories/linux" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-th"></i> <br />Compu</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-notes">
+    <a href="/categories/notes" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-th"></i> <br />Notes</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-reisen">
+    <a href="/categories/Reisen" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-th"></i> <br />Reisen</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-stories">
+    <a href="/categories/story" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-th"></i> <br />Stories</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-lyrics">
+    <a href="/categories/lyrics" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-th"></i> <br />Lyrics</a>
+  </li>
+
+      
+      
+    </ul>
+  
+
+  
+    
+
+  
+
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://zer0618.github.io/2018/10/07/2011-08-29-internship/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="2ER0">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="2ER0's adventure">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">实习笔记
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2018-10-07 02:43:03" itemprop="dateCreated datePublished" datetime="2018-10-07T02:43:03+02:00">2018-10-07</time>
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/MaPhy/" itemprop="url" rel="index"><span itemprop="name">MaPhy</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>2011.5在近物所实习 学到不少东西 谢谢两位指导我的副研和博士先生</p>
+<p>ROOT</p>
+<p>好吧其实主要是看他们官方的数据结构手册 很详细 还有平兄给我的课件 我就没做多少笔记了= =</p>
+<p><a href="http://wenku.baidu.com/view/3d9f48c69ec3d5bbfd0a749e.html" target="_blank" rel="noopener">http://wenku.baidu.com/view/3d9f48c69ec3d5bbfd0a749e.html</a></p>
+<p>数据结构</p>
+<p>Histograms</p>
+<p>Tree</p>
+<p>Spectrum（peak finder background）</p>
+<p>56Zn衰变实验方法讨论的ppt（这玩意不用保密吧…）</p>
+<p>物理目标</p>
+<p>快速质子俘获：发生在丰质子核区的爆发性氢燃烧（rp-）过程<br>56Zn是 rp-过程反应路径上可能的等待核,其衰变特性是决定rp-过程反应路径的关键因素之一</p>
+<p>爆发性氢燃烧：爆发性核合成 rp是快质子过程 “等待核‘ 俘获</p>
+<p>元素合成理论：</p>
+<pre><code>阐明宇宙中各种元素及其同位素的形成过程的学说。元素的丰度曲线是相当复杂而又有一定规律的。元素及其同位素的分布规律，一方面反映原子核结构的规律性，另一方面与元素的起源和演化史密切相关。关于元素的起源或合成的任何一种假说，都必须解释这一分布的规律性。早期提出的假说有：平衡过程假说、中子俘获假说、聚中子裂变假说等。它们都试图用单一过程解释全部元素的成因，结果是顾此失彼，难以自圆其说。1957年，伯比奇夫妇、福勒、霍伊尔等人提出了元素在恒星中合成的假说，通常简称为B2FH理论。他们摒弃了全部元素都是通过单一过程一次形成的想法，提出了与恒星不同演化阶段相应的八个形成过程，认为所有的元素及其同位素都是由氢通过发生在恒星上的八个过程逐步合成的。它们合成后，由恒星抛射到宇宙空间，形成了我们所观测到的元素的丰度分布。B2FH理论提出的八个过程是：①氢燃烧：发生于温度T≥7×106K的条件下，是四个氢核聚变为氦核的过程;②氦燃烧：发生于T≥108K的条件下，是由氦核聚变为碳核(12C)和氧核(16O))等的过程；③α过程：α粒子与20Ne相继反应生成24Mg、28Si、32S、36Ar等的过程；④e过程，即所谓的平衡过程：发生在温度和密度都很高的条件下，元素丰度曲线上的铁峰元素（V、Cr、Mn、Fe、Co、Ni等）通过这个过程生成；⑤s过程，即慢中子俘获过程；⑥r过程,即快中子俘获过程：比铁峰元素更重的元素可能通过r或s过程生成;⑦p过程，即质子俘获过程：一些低丰度的富质子同位素可能通过这个过程生成；⑧x过程：生成2D、Li、Be、B等低丰度轻元素的过程。 
+B2FH理论发表后，不断得到原子核物理学、天体物理学和宇宙化学方面的新成就的补充和修正。其主要进展有：①提出了一些新的过程，如碳燃烧、氧燃烧和硅燃烧等。碳燃烧、氧燃烧和硅燃烧分别发生在T≥6×108K、T≥109K和T&gt;3×109K或4×109K的条件下。近年来的研究发现,爆发性碳燃烧可以说明Ne到Si的观测丰度,爆发性氧燃烧可以说明Si到Ca的观测丰度，准平衡的硅燃烧可以说明铁峰元素的观测丰度。②在许多天体上，氦丰度相当大，按质量计约为30％，用恒星内部的核反应理论不能说明这个事实。大爆炸宇宙学认为宇宙曾经有过一段从热到冷的演化史。宇宙早期温度很高，生成氦的效率也高，从而造成氦的高丰度。③6Li、Be、B等轻元素的观测丰度，可以用宇宙线粒子与星际空间的12C、14N、16O、20Ne等原子核碰撞而使后者碎裂来说明。 
+</code></pre><p>实验方法：</p>
+<p>1、将RIBLL产生的56Zn等重离子注入到硅微条探测器中，测量其在探测器内部的延迟质子发射，通过CLOVER测量质子发射的伴随射线。 </p>
+<p>2、连续注入，通过DE-TOF甄别出56Zn ，确定56Zn在硅微条探测器的方格位置(3×3mm)，在此方格内向后符合3个半衰期寻找质子。</p>
+<p>3、通过定标器给每个事例打上时间标签，确定每次衰变的寿命。</p>
+<p>LISE结果</p>
+<p>束斑大小：5mm</p>
+<p>降能片厚度不均匀：5mium</p>
+<p>TOF 25mium 分辨 0.2ns</p>
+<p>TOF 大小为+-25mm</p>
+<p>考虑后 束流强度比初估降低3倍左右</p>
+<p>LISE++</p>
+<p>bqv=mv^2/R    Brpo=mv/q</p>
+<p>M/q \propto A/Z</p>
+<p>\delta E \propto Z^2</p>
+<p>（LISE界面看起来好酷&gt;&lt; 不过只有exe格式我就呃…了 最后只好装了个wine）</p>
+<p>核电子学</p>
+<p>暗电流：</p>
+<p>dark cerrent 也称无照电流</p>
+<p>光电耦合器的输出特性是指在一定的发光电流IF下，光敏管所加偏置电压VCE与输出电流IC之间的关系，当IF=0时，发光二极管不发光，此时的光敏晶体管集电极输出电流称为暗电流，一般很小。</p>
+<p>暗电流，又称饱和暗电流，是表征半导体二极管性能好坏的一个重要参数； 暗电流影响着电池片的电压、电流等电参数； 暗电流越小，表明二极管的电学特性越好； </p>
+<p>光电倍增管：</p>
+<p>光电倍增管（Photomultiplier，簡稱PMT），是一种對紫外光、可見光和近紅外光極其敏感的特殊电子管。它能使進入的微弱光信號增強至原本的108，使光信號能被測量。</p>
+<p>工作原理：</p>
+<p>光電倍增管是由玻璃封裝的真空裝置，其內包含光電陰極 (photocathode)，幾個二次發射極 (dynode)和一個陽極。入射光子撞擊光電陰極，產生光電效應，產生的光電子被聚焦到二次發射極。其後的工作原裡如同電子倍增管，電子被加速到二次發射極產生多個二次電子，通常每個二次發射極的電位差在 100 到 200 伏特。二次電子流像瀑布一般，經過一連串的二次發射極使得電子倍增，最後到達陽極。一般光電倍增管的二次發射極是分離式的，而電子倍增管的二次發射極是連續式的。</p>
+<p>应用：</p>
+<p>光電倍增管集高增益，低干擾，對高頻信號有高靈敏度的優點，因此被廣泛應用於高能物理、天文等領域的研究工作，與及流體流速計算、醫學影像和連續鏡頭的剪輯。雪崩光電二極管（Avalanche photodiodes，簡稱APDs）為光電倍增管的替代品。然而，後者仍在大部份的應用情況下被採用。</p>
+<p>一般光电倍增管加高压在1200左右 硅探测器在70</p>
+<p>暗电流如果突然增大 则有可能是宇宙射线或可见光之类的信号 在调的过程中 硅比较脆弱 须慢慢调 一般给硅加高压的器件都是用螺丝刀一点一点拧的 如果在示波器上看到异常 就得退下来检查 如果突增 则有可能性能不佳 可以用在找信号上但不能用于定量测量</p>
+<p>关闭电源之前应先把电压退干净</p>
+<p>示波器上显示的反向信号是不是楞次定律的作用？</p>
+<p>信号的反峰可能是因为</p>
+<p>1 输出阻抗（一般为50V与示波器阻抗不匹配）</p>
+<p>2 本身信号做微分 以适应下降沿的逻辑××</p>
+<p>塑料闪烁体：</p>
+<p>闪烁体探测器：主要由闪烁体、光的收集部件和光电转换器件组成的辐射探测器。当粒子进入闪烁体时，闪烁体的原子或分子受激而产生荧光。利用光导和反射体等光的收集部件使荧光尽量多地射到光电转换器件的光敏层上并打出光电子。这些光电子可直接或经过倍增后，由输出级收集而形成电脉冲。 很多物质都可以在粒子入射后而受激发光，因此闪烁体的种类很多,可以是固体、液体或气体。</p>
+<p>有机闪烁体大多属于苯环结构的芳香族碳氢化合物，其发光机制主要由于分子本身从激发态回到基态的跃迁。同无机晶体一样，有机闪烁体也有两个发光成分,荧光过程小于1纳秒。有机闪烁体又可分为有机晶体闪烁体、液体闪烁体和塑料闪烁体。有机晶体主要有蒽、茋、萘等，具有比较高的荧光效率，但体积不易做得很大。液体闪烁体和塑料闪烁体可看作是一个类型，都是由溶剂、溶质和波长转换剂三部分组成，所不同的只是塑料闪烁体的溶剂在常温下为固态。还可将被测放射性样品溶于液体闪烁体内，这种“无窗”的探测器能有效地探测能量很低的射线。液体和塑料闪烁体还有易于制成各种不同形状和大小的优点。塑料闪烁体还可以制成光导纤维，便于在各种几何条件下与光电器件耦合。</p>
+<p>APD：</p>
+<p>apd不同于”正常”光电二极管,来袭的光子在内部引发电荷雪崩. 先决条件是对APD运用反向偏压来拓宽吸收层”A”.一般的光电二极管，来袭的光子产生的电子-空穴,又称电荷载体,供应可测量的光电流.来袭photons的能量已被转化成电能. 在这里,apd已向前迈出了重要一步. 偏向能量已经远高于正常光电二极管. 在apd, 电荷载体放生的灯都在电场加速，以这样一种方式通过撞击电离进一步产生的电子-空穴对.  如果反向偏压小于击穿电压,由于摩擦损失无法累积雪崩效应. 通过这点单光子已经了产生数百甚至数千electrons. 在击穿电压以上,电荷载体的加速达到足够高，可以保持雪崩效应.单光子就足以产生恒流可以通过外部电子设备测量. 目前产生的计算方法如下:I=R0xMxP8  (Ro(A/W)是APD的光谱响应, M是内部增益和PS(瓦特)是入射光功率. Apd的放大倍数从而取决于反向偏压应用 </p>
+<p>焊高压线的时候应该先留下地线不要剪掉 不然之后焊好芯后容易发现长度不合适</p>
+<p>焊pd的时候可以把地线铜丝搓在上面会比较好焊 但缺点是不易更换</p>
+<p>焊的时候要快一点 不要一个劲补 一是越描越黑二是可能温度过高会影响pd和apd</p>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/物理/" rel="tag"># 物理</a>
+          
+            <a href="/tags/实习/" rel="tag"># 实习</a>
+          
+            <a href="/tags/近物所/" rel="tag"># 近物所</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/10/07/2011-08-29-borg/" rel="next" title="群体智能与borg">
+                <i class="fa fa-chevron-left"></i> 群体智能与borg
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/10/07/2018-10-05-brot/" rel="prev" title="Brot">
+                Brot <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">2ER0</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives">
+                
+                    <span class="site-state-item-count">105</span>
+                    <span class="site-state-item-name">posts</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">9</span>
+                    <span class="site-state-item-name">categories</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">132</span>
+                    <span class="site-state-item-name">tags</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">2ER0</span>
+
+  
+
+  
+</div>
+
+
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> v3.7.1</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme – <a class="theme-link" target="_blank" href="https://theme-next.org">NexT.Mist</a> v6.4.2</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+	
+    
+
+    
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.4.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.4.2"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.4.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.4.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.4.2"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+
+  
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

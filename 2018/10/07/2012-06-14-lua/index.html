@@ -1,0 +1,1135 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html class="theme-next mist" lang="">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=6.4.2" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.4.2">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.4.2">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.4.2">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.4.2" color="#222">
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '6.4.2',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="写航行日志是个很讨厌的活儿，为啥不能叫 +2er0 自动记录啊，还非得叫做船长日志，这是什么坑爹的传统啊。唉，我就简要记一下吧。  这次的事一开始其实进行的挺顺利，直到我他妈膝盖中了一箭，跪了好吗。  什么革命军和联邦政府跟老娘半块钱的关系都没有好不，你们就一蛋疼的极端环保组织，还革命呢，总共就四颗行星，能有什么作为。就算帮你们弄个情报老娘也不会少吃银河系各种生物的，更不会卸掉零号上的核融射线驱动">
+<meta name="keywords" content="飞船,日志">
+<meta property="og:type" content="article">
+<meta property="og:title" content="露阿银矿">
+<meta property="og:url" content="http://zer0618.github.io/2018/10/07/2012-06-14-lua/index.html">
+<meta property="og:site_name" content="2ER0&#39;s adventure">
+<meta property="og:description" content="写航行日志是个很讨厌的活儿，为啥不能叫 +2er0 自动记录啊，还非得叫做船长日志，这是什么坑爹的传统啊。唉，我就简要记一下吧。  这次的事一开始其实进行的挺顺利，直到我他妈膝盖中了一箭，跪了好吗。  什么革命军和联邦政府跟老娘半块钱的关系都没有好不，你们就一蛋疼的极端环保组织，还革命呢，总共就四颗行星，能有什么作为。就算帮你们弄个情报老娘也不会少吃银河系各种生物的，更不会卸掉零号上的核融射线驱动">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-10-07T00:56:20.737Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="露阿银矿">
+<meta name="twitter:description" content="写航行日志是个很讨厌的活儿，为啥不能叫 +2er0 自动记录啊，还非得叫做船长日志，这是什么坑爹的传统啊。唉，我就简要记一下吧。  这次的事一开始其实进行的挺顺利，直到我他妈膝盖中了一箭，跪了好吗。  什么革命军和联邦政府跟老娘半块钱的关系都没有好不，你们就一蛋疼的极端环保组织，还革命呢，总共就四颗行星，能有什么作为。就算帮你们弄个情报老娘也不会少吃银河系各种生物的，更不会卸掉零号上的核融射线驱动">
+
+
+
+
+
+
+  <link rel="canonical" href="http://zer0618.github.io/2018/10/07/2012-06-14-lua/"/>
+
+
+
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>露阿银矿 | 2ER0's adventure</title>
+  
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="default">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">2ER0's adventure</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="Toggle navigation bar">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+    <a href="/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />Home</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+    <a href="/about/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-user"></i> <br />About</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+    <a href="/tags/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />Tags</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-maphy">
+    <a href="/categories/MaPhy" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-th"></i> <br />MaPhy</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-musik">
+    <a href="/categories/Musik" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-th"></i> <br />Musik</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-sword">
+    <a href="/categories/sword" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-th"></i> <br />Sword</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-compu">
+    <a href="/categories/linux" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-th"></i> <br />Compu</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-notes">
+    <a href="/categories/notes" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-th"></i> <br />Notes</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-reisen">
+    <a href="/categories/Reisen" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-th"></i> <br />Reisen</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-stories">
+    <a href="/categories/story" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-th"></i> <br />Stories</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-lyrics">
+    <a href="/categories/lyrics" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-th"></i> <br />Lyrics</a>
+  </li>
+
+      
+      
+    </ul>
+  
+
+  
+    
+
+  
+
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://zer0618.github.io/2018/10/07/2012-06-14-lua/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="2ER0">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="2ER0's adventure">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">露阿银矿
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2018-10-07 02:56:20" itemprop="dateCreated datePublished" datetime="2018-10-07T02:56:20+02:00">2018-10-07</time>
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/story/" itemprop="url" rel="index"><span itemprop="name">story</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>写航行日志是个很讨厌的活儿，为啥不能叫 +2er0 自动记录啊，还非得叫做船长日志，这是什么坑爹的传统啊。唉，我就简要记一下吧。 </p>
+<p>这次的事一开始其实进行的挺顺利，直到我他妈膝盖中了一箭，跪了好吗。 </p>
+<p>什么革命军和联邦政府跟老娘半块钱的关系都没有好不，你们就一蛋疼的极端环保组织，还革命呢，总共就四颗行星，能有什么作为。就算帮你们弄个情报老娘也不会少吃银河系各种生物的，更不会卸掉零号上的核融射线驱动器。妈的，我不是抱怨，真是看不惯这些固定空间点社会的狭隘种族。 </p>
+<p>总之到了联邦那啥阿尔法空间站跟前，弄坏咱们行星际小飞艇的引擎，成功发送求救信号，被当作遇难渔民救上空间站。联邦这帮人也是瞎的，看老娘低调奢华的高尚气质像个渔民吗。目标是空间站三层的档案馆，档案馆里有封禁的联邦殖民期黑历史。所以说你们这些固定空间点社会的生命体没见识，黑历史有个啥啊，不就是些屠杀边缘小星系智慧生命体的故事吗，没听过有句古老的地球格言叫做弱肉强食吗，人家殖民的时候饿着肚子不吃那些低等智慧生命怎么办，你们保护动物，那植物还是我们的朋友呢，植物也有高等智慧种族，你们不要杀害他们都他妈光合作用去啊，光合作用还会吸收智慧光能场呢。联邦也白痴，这种事情本来也没啥，非要掖着藏着，还得老娘去你们那个老得一逼的破档案馆里翻纸质手稿。 </p>
+<p>不过一想到咱们的报酬，一片可能埋着露阿银矿的土地，我估计我也忍不住舔了舔嘴唇，在去三层的电梯上。露阿银是他们那个该死的极端环保恐怖分子大本营卫星上的特产，近来被发现又轻又硬价值非凡。他们自己没勘测开采技术，只好卖土地开矿权，这下咱们发了。 </p>
+<p>进入三层是按照 +恶男Jet 在船上联络还我家园革命军的人发来的信息，和他们潜入在空间站的人接头，他给了我一张通行证，这样通过港口区关卡上的电梯。 </p>
+<p>三层是生活区，档案馆就在学校边上。人们正热热闹闹地搞节日庆典，鬼才知道他们啥节日，反正游行的队伍挺长。我在街边的拉面铺子里碰到了熟人，一个美丽的西加加尔星舞女。跟她打了招呼，她很欣喜能在这儿遇到我，她是他们专门请来为晚上的庆祝活动演出的。我赶紧为了制止她继续说下去而问她档案馆在哪，别看这姑娘挺漂亮，实际上跟熟人是个超级话痨，我可没时间听她讲八卦。 </p>
+<p>正转身走的当口，忽然看到人群中有个熟悉的身影，跟上去仔细一看，竟然是很久以前在地球认识的发小妹子，当时我那个吃惊不亚于一口塞下一个露阿鸟蛋。她穿着某个我不认识的星舰制服式的礼服，跟着一个游行队伍缓缓向前。等等，她确实可能是冬眠到现在苏醒的，但也可能是通过基因工程保留了生物信息，这已经是好多代了，克隆N号之类的，总之我得先冷静。忽然间她扭头看向我这边，我心跳都快停了，但她好像没有看到我，表情漠然地转了回去继续随着人群前行。说实话我有点失落，就算现在确实不能暴露，但毕竟是这么多年没见的老朋友了。她还年轻得很，时间并没在她身上留下丝毫痕迹，一切都好像很久以前我们时常见面时那样，只是我已经衰老得她认不出了。 </p>
+<p>我也收回目光，转身向远离嘈杂人群的方向走去，其实庆典的喧闹声早在看到她的时候就远离了我，我感到一阵疲惫，想要快点了事，拿银子走人。 </p>
+<p>Jet告诉我，一个人的地面作战小分队队长 +口水龙 在出口处等待接应，已经就位。我迅速打开全频段电磁波迷彩混进档案馆，开始拿出在地球读书写论文的技能翻阅积满粒子浮尘的书架，估计这么多年没什么人还有这种古老的能力了，所以这些书也很久没有被翻开过，所以他们才会找我。大概有七个半单位光年跃迁时的功夫吧，找到了两个随军记录员的手稿，还有一张联邦政府的“开发许可证”，其实也就是屠杀许可，够了，收工。 </p>
+<p>迅速往出口走，远远就看见刺蛇和那个西加加尔星姑娘搭上了话，两人在那笑着说着什么。于是用内部通讯频段跟刺蛇说可以拉西加加尔星姑娘上船，他没回答不知道听见没有。 </p>
+<p>人群开始像广场聚拢，我也随着人群移动，同时打开通讯器把加密好的扫描资料传给Jet，之后Jet就可以与傻逼革命军进行交易。想到一上船就可以拿到开采许可，成为拥有露阿银矿的人生赢家，我心情十分愉快。 </p>
+<p>人们仰着脸看广场中间的台上，空间站城市市长发表庆典演说。由于所有进出港数据都要经过审核，我们只能运用分段密文传送，我只好耐心等着，听市长冗长的演讲。抬头看到我那妹子也坐在台上，就在市长旁边，这家伙，发达了吗。 </p>
+<p>这时Jet的声音传来，说要我们与另一个间谍汇合，他们安排我们回船。数据就快传完了，市长开始向民众介绍幼驯染姑娘。原来她已经成为横跨几个小星系的矿业大亨，这次来是和联邦城市签订开采协议的。我忽然觉得搞不好她也有露阿银矿的土地所有权，刚好，这下我们一样了。我心里得意地想着之后可以把开采权送给她，由她来代理开采，这样不仅可以讨佳人欢心，还可以省去我与开采队打交道的麻烦，虽然比自己弄所有程序收益少点，但可以直接获益不用操心。 </p>
+<p>护送我们出港的间谍头像传来，居然是西加加尔星姑娘，好吧，这已经接上头了，万事俱备，就等数据传完。我又看着台上熟悉又陌生的妹子，她面无表情，仿佛在认真听，又仿佛另有所想。演讲结束，市长祝大家吃好喝好尽情玩乐，很好，尽情玩乐吧，没人会注意到我们。我开始往出口走，刺蛇也看到了我，数据传完了，我就要发了。我行走在欢乐的人群中，想着一些有的没的，周围的喧闹和我保持着距离，感觉人们一哄散去，但又忽然停下，有些角落传来咒骂声。 </p>
+<p>“怎么了？”我立刻询问Jet，他负责全过程的信息搜集。 </p>
+<p>“不知道，好像是空间站港口出了问题。” </p>
+<p>“船长，”刺蛇说，“好像是那些恐怖份子做了点什么，传完了吧，你快点过来我们扯乎。” </p>
+<p>“你们才是恐怖分子呢，我们是革命军”刺蛇的话筒里传来西加加尔姑娘的声音。 </p>
+<p>我不禁在心里咒骂，搞你妹的恐怖活动啊，用脚趾想都想到了，肯定是他们趁着今天人多想要以空间站的人们做人质，要挟联邦放弃露阿矿藏退出他们那可怜的四颗行星。妈逼你们就没有一个统一的总指挥吗，四颗星各搞各的，老娘还没出去呢，你们这么破坏了空间站的通道，老娘跑路的时候岂不是很明显。 </p>
+<p>我跑到电梯口，刺蛇和西加加尔姑娘迅速打开电梯门，我们闪了进去。 </p>
+<p>“你们他妈的怎么回事啊。”电梯门一关我就忍不住骂西加加尔姑娘，“你怎么也跟他们那帮傻逼混在一起，没有动物蛋白你能保持皮肤弹性吗。” </p>
+<p>“我只是被临时拜托接应你们的，我们家在露阿四星有地，都是白花花的银子，干嘛不帮他们一把。”西加加尔姑娘撇了撇嘴，“我哪知道他们怎么回事，但谁会跟银子过不去。” </p>
+<p>好吧，没人会，我只好也撇撇嘴，不做声了。电梯还在运行，Jet忽然接进来叫我们快点，恐怖份子们威胁要在空间站里放生化武器，他们掌握一种退化病毒，会使高等智慧体退化至低级状态。“然后在空间站发微波把这些食材全部热了吃吗？”我没忍住吐槽，“他们自己倒是不用带任何防护面具，因为这种针对高等智慧体的病毒不对他们起作用。”我们三人笑笑，继续向下。 </p>
+<p>不行，我忽然收起笑容，幼驯染妹子还在三层，要是他们真放了病毒岂不是糟糕了。我在刺蛇和西加加尔姑娘惊异的眼光中将电梯停下又按了返回：“得救个人。”我说。不管她是不是本人，复制品也得救，妈的，我这么有情义，我自己都感动了。 </p>
+<p>我冲出电梯，现在不太记得怎么穿过一片混乱的人群的了，跑到台前用晕眩效果打了一枪，从目瞪口呆的市长旁边一把把她拉了下来，扛着她开始猛跑。她昏倒之前倒是一脸镇定，好像一点也不吃惊。 </p>
+<p>又是一切顺利地跑到电梯，下去到出口，坐上西加加尔妹准备好的穿梭船，顺利得我都有点莫名其妙，人品终于爆发了？ </p>
+<p>可想而知，当整个空间站的出口都被封锁完全没有进出船只的时候，一艘小船是多么明显。还好我们走的比较及时，尽管联邦在事发后集结的警卫舰发现了我们，但由于先发以及相反的加速度，要追上我们是不太可能了，等上了零号，就可以跃迁把他们甩得远远的了。我一边驾着穿梭艇狂飙一边得意地跟醒了的幼驯染妹子说明情况，并表示我会把我的露阿矿开采权送给她。她连笑都没笑，我自讨了个没趣，只好闭嘴开回了零号。 </p>
+<p>四人登船后，我发现迎接我的不是干了一大票以后的兴高采烈，Jet阴沉着脸递给我一块显示板。上面正在播新闻，内容是，还我家园革命军绑架了联邦商人潜逃，画面定格在我们的小穿梭艇上。 </p>
+<p>“还有空间站的人呢，一个城市的人都没播，播了我们，怎么回事。” </p>
+<p>“怎么回事，”Jet说，“我还想问你怎么回事呢船长大人。革命军在交易的时候说我们绑架了他们的干部，是联邦的走狗，不仅拒绝支付报酬，而且已经锁定了我们准备包围了。” </p>
+<p>操，我哪知道怎么回事，我只能傻兮兮的看着幼驯染妹子，问她怎么回事。 </p>
+<p>妹子描述完之后我才终于拼接出整个情况，她是他们露阿银矿的所有者，大股东，所以也是革命军的赞助者。但联邦政府并不知道她和露阿四星的关系，她的表面身份还是矿业大亨。其实这次联邦把她作为上宾邀请去洽谈开采事宜，他们就打算上演一出劫持联邦重要人士的戏码，来讹诈联邦要求撤矿。结果没想到被前去为他们后续宣传工作打工的我们横插一手。 </p>
+<p>听着这些，我当时的心情真是，萦绕的纳尼挥之不去，满心的卧槽无从表达。“冰箱！”我大概声音吼太大了，船员们都一副“冷静啊船长”的表情看着我。 +HAL277K 匆匆跑来问我什么事。“给我来一杯，越烈越好，要冰的。”我说。冰箱说：“可是，船长，喝酒对身体不好。” </p>
+<p>好了好了，我知道了，我不会做什么出格的事的，只是在思考对策。正在我思考对策的时候，零号响起了警报：“警戒状态，远程传态系统已被入侵，L⑨你可以去死了。船员们，识时务者为俊杰，只要献上L⑨的首级，我就带你们逃跑。”这时船身一摇，我们被攻击了。 </p>
+<p>“我估计是联邦的人在入侵，他们舍不得炮弹。”Jet说，“而革命军没那个技术，只好轰我们。” </p>
+<p>“正解。后有联邦追兵前有恐怖分子，太棒了，”我迅速跑上舰桥，“零号，找出国际歌，用那个频率在30度极角上震动飞船，给跃迁器充能。”看这些小嫩鸟们再怎么锁定我们来传态。 </p>
+<p>有两个联邦条子登舰，刺蛇小队长去收拾他们。Jet去联邦面张开防护力场，并随时准备拦截，毕竟论火力，联邦的炮弹我们是吃不起的。我一把拖过冰箱，将它塞进炮筒，同时跳进小型战斗飞机。刺蛇把那俩条子也塞进炮筒打了回去。 </p>
+<p>轰的一声，冰箱在革命军聚拢的小舰队前炸开，我们存放的生熟各类肉食像陨石雨般射向他们，有的船被劈头盖脸淋了一身肉汁。哼哼，总算爽了，素食主义者们见到这傻了吧。我还没等他们反应过来就拽回冰箱，跳上零号，跃迁器充好能了。 </p>
+<p>“准备跃迁，3，2，1，跳。” </p>
+<p>整个空间终于安静了，前方又是广阔黑暗的宇宙。 </p>
+<p>我问西加加尔姑娘愿不愿意跟我们一起航行，在船上做做接待工作，她嫌我们赚不到钱，不愿意。幼驯染妹子当然不是我从小认识的那个，不知经过了多少代，虽然确实是她的基因，但经过不知多少突变，早就并不十分相似了。是我的记忆也经过了太长时间，变的模糊扭曲了。问她愿不愿意留下，她说她才不愿意跟我们这些卑鄙可耻的海盗在一起呢，唉，那些高尚的环保人士在她那可爱的小脑袋里塞满了屎。 </p>
+<p>我叫西加加尔姑娘送她回去，看着她们的穿梭艇远去，我内心充满了悲伤，我的露阿银矿就这么没了，真想把他们通通宰了。</p>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/飞船/" rel="tag"># 飞船</a>
+          
+            <a href="/tags/日志/" rel="tag"># 日志</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/10/07/2012-06-14-cishe/" rel="next" title="刺蛇下船">
+                <i class="fa fa-chevron-left"></i> 刺蛇下船
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/10/07/2012-06-24-a1var0_miss/" rel="prev" title="[A1var0]思念">
+                [A1var0]思念 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">2ER0</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives">
+                
+                    <span class="site-state-item-count">105</span>
+                    <span class="site-state-item-name">posts</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">9</span>
+                    <span class="site-state-item-name">categories</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">132</span>
+                    <span class="site-state-item-name">tags</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">2ER0</span>
+
+  
+
+  
+</div>
+
+
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> v3.7.1</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme – <a class="theme-link" target="_blank" href="https://theme-next.org">NexT.Mist</a> v6.4.2</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+	
+    
+
+    
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.4.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.4.2"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.4.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.4.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.4.2"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+
+  
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
