@@ -1,0 +1,1048 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html class="theme-next mist" lang="">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=6.4.2" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.4.2">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.4.2">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.4.2">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.4.2" color="#222">
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '6.4.2',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="About EPR">
+<meta name="keywords" content="物理,physics">
+<meta property="og:type" content="article">
+<meta property="og:title" content="EPR佯谬">
+<meta property="og:url" content="http://zer0618.github.io/2011/08/30/2011-08-30-epr/index.html">
+<meta property="og:site_name" content="2ER0 SPACETIME">
+<meta property="og:description" content="About EPR">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-10-07T18:03:48.652Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="EPR佯谬">
+<meta name="twitter:description" content="About EPR">
+
+
+
+
+
+
+  <link rel="canonical" href="http://zer0618.github.io/2011/08/30/2011-08-30-epr/"/>
+
+
+
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>EPR佯谬 | 2ER0 SPACETIME</title>
+  
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="default">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">2ER0 SPACETIME</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="Toggle navigation bar">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+    <a href="/about/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-bug"></i> <br />About</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-maphy">
+    <a href="/categories/maphy" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-bath"></i> <br />MaPhy</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-musik">
+    <a href="/categories/musik" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-music"></i> <br />Musik</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-saga">
+    <a href="/categories/story" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-fire"></i> <br />Saga</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-notes">
+    <a href="/categories/notes" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-terminal"></i> <br />Notes</a>
+  </li>
+
+      
+      
+    </ul>
+  
+
+  
+    
+
+  
+
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://zer0618.github.io/2011/08/30/2011-08-30-epr/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="2ER0">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="2ER0 SPACETIME">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">EPR佯谬
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2011-08-30 01:09:37" itemprop="dateCreated datePublished" datetime="2011-08-30T01:09:37+02:00">2011-08-30</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2018-10-07 20:03:48" itemprop="dateModified" datetime="2018-10-07T20:03:48+02:00">2018-10-07</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/maphy/" itemprop="url" rel="index"><span itemprop="name">maphy</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+              <div class="post-description">About EPR</div>
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>1935年，A.Einstein,B.Podolsky和N.Rosen联合发表了一篇简短文章，以二粒子体系的相对坐标x=(x1-x2)和总动量P=(p1+p2)的共同本征态为例，来说明量子力学是不自洽的。史称EPR佯谬。 </p>
+<p>首先，EPR给出”物理理论“的四个概念： </p>
+<pre><code>1 相对性原理（空间任意两点不存在超光速信号），这个信号指物理场粒子; 
+
+2 定域性（Locality）; 
+</code></pre><p>3 实在性（Reality）： </p>
+<p>if 能以几率100%预言某一个量 </p>
+<p>then 该量对应于一个物理实在 </p>
+<p>4 完备性：只要客观存在的量，在理论中应有相应的描述。 </p>
+<p>例子： </p>
+<p>考虑一维粒子的量子态 Psi_p0（x）= e^(ip0x/hbar) </p>
+<p>它是粒子动量p= -i hbar(partial/partial x )的本征态，本征值为p0。在此态下，粒子具有确定的动量p0，所以粒子动量是”物理实在“。但由于Psi并非粒子坐标x的本征态，这个量子态不能确切预言粒子的坐标。而要想知道粒子的坐标，只能靠测量。但测量粒子的坐标后，粒子将不再处于原来的量子态Psi。因此，大牛联盟EPR认为，在此态下，粒子坐标不是一个”物理实在“。 </p>
+<p>另一个怀疑是针对定域性的： </p>
+<p>简单地说，两粒子处于相对坐标x=(x1-x2)和总动量P=(p1+p2)的共同本征态，由于两个粒子相距很远，对粒子1进行的任何测量（动量，坐标），都不会影响到粒子2的状态[定域性]。然而测量1后，粒子2究竟处于什么状态？是Psi_p(x2)?还是phi_x(x2)?有此，他们批评”量子力学的描述是不自洽的“。 </p>
+<p>1952年，Bohm吧EPR佯谬的表述得更加明了。他考虑的是自旋为1/2的二粒子体系，处于自旋单态（S=0）,例如正负电子偶素e^(+)-e^(-)的基态（S=0 L=0 J=0）,这是一个在空间旋转下不变的量子态。在t&lt;=0时，是束缚态。 </p>
+<p>按EPR的论点，当t&gt;T以后，由于两粒子已经距离很远不再有相互作用，测量粒子1的自旋，不应对粒子2的自旋有任何影响。这样就可以指着Bohr的鼻子问，粒子2究竟处于|s_2z=-1/2&gt;态还是|s_2x=-1/2&gt;态？所以认为量子力学对于这种测量的描述是不自洽的。 </p>
+<p>面对爱因斯坦等人的反驳，玻尔对EPR实在性判据中关于“不对体系进行任何干扰”的说法提出了异议，认为“测量程序对于问题中的物理量赖以确定的条件有着根本的影响，必须把这些条件看成是可以明确应用‘物理实在’这个词的任何现象中的一个固有要素，所以EPR实验的结论就显得不正确了”。玻尔以测量仪器与客体实在的不可分性为理由，否定了EPR论证的前提———物理实在的认识论判据，从而否定了EPR实验的佯谬性质。 </p>
+<p>Cantrell&amp;Scully也曾提出一个从量子力学理论来说明EPR佯谬的方案。其要点是：对于一个复合体系的子体系进行的测量，是一个不完备的测量，因而对它的任何一个子体系的量子态的描述，必须用约化密度矩阵形式来描述。 </p>
+<p>至此加上Bell等人的发展，引出了纠缠的概念： </p>
+<p>对于二粒子态|x=a P=b&gt;，不管两个粒子相距a多么远，分别对两个粒子同时测量p1和p2（概率不等于0）的结果，彼此确切相关联，这就是量子的非定域性（quantum nonlocality）。这种态人们称之为纠缠态。 </p>
+<p>直到1964年Bell根据定域实在论得出一个著名的不等式后，人们才可以通过实验观测来判断量子力学理论正确。 </p>
+<p>|P(a,b)-P(a,c)|&lt;=1+P(b,c) </p>
+<p>此即Bell不等式，适用于自旋为1/2的二粒子体系处于自旋单态的情况。可以证明，不等式与量子力学理论是矛盾的。 </p>
+<p>然后Aspect同学首次对处于偏振纠缠态|Psi+&gt;的光子对进行偏振关联的实验检验了CHSH不等式（基于Bell）。测量结果与量子力学预期值相符。 </p>
+<p>这样，量子力学虽然否定了老爱”上帝不掷骰子“的说法，但是它是至少目前证明完备的，所谓骰子也是固定的几个面。并且它的决定性虽然否决了之前的”知道所有初始条件就可以知道之后的所有演化“，但依然是一种确定的”物理实在“，对波函数的概率诠释可以满足统计上的决定性。</p>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/物理/" rel="tag"># 物理</a>
+          
+            <a href="/tags/physics/" rel="tag"># physics</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2011/08/29/2011-08-29-borg/" rel="next" title="群体智能与borg">
+                <i class="fa fa-chevron-left"></i> 群体智能与borg
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2011/08/30/2011-08-30-infomation/" rel="prev" title="关于信息的接受">
+                关于信息的接受 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.gif"
+                alt="2ER0" />
+            
+              <p class="site-author-name" itemprop="name">2ER0</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives">
+                
+                    <span class="site-state-item-count">86</span>
+                    <span class="site-state-item-name">posts</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">7</span>
+                    <span class="site-state-item-name">categories</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">111</span>
+                    <span class="site-state-item-name">tags</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  <a href="https://twitter.com/zer0618" target="_blank" title="Twitter"><i class="fa fa-fw fa-twitter"></i>Twitter</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="https://soundcloud.com/2er0" target="_blank" title="Soundcloud"><i class="fa fa-fw fa-soundcloud"></i>Soundcloud</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="https://2er0.bandcamp.com" target="_blank" title="Bandcamp"><i class="fa fa-fw fa-bandcamp"></i>Bandcamp</a>
+                  
+                </span>
+              
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">2ER0</span>
+
+  
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+	
+    
+
+    
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.4.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.4.2"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.4.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.4.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.4.2"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+
+  
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

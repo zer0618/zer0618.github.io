@@ -1,0 +1,1135 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html class="theme-next mist" lang="">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=6.4.2" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.4.2">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.4.2">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.4.2">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.4.2" color="#222">
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '6.4.2',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="Notes of ubuntu">
+<meta name="keywords" content="linux,笔记,ubuntu">
+<meta property="og:type" content="article">
+<meta property="og:title" content="两年ubuntu的零散笔记">
+<meta property="og:url" content="http://zer0618.github.io/2010/07/30/2011-07-30-ubuntu/index.html">
+<meta property="og:site_name" content="2ER0 SPACETIME">
+<meta property="og:description" content="Notes of ubuntu">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-10-07T22:01:16.623Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="两年ubuntu的零散笔记">
+<meta name="twitter:description" content="Notes of ubuntu">
+
+
+
+
+
+
+  <link rel="canonical" href="http://zer0618.github.io/2010/07/30/2011-07-30-ubuntu/"/>
+
+
+
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>两年ubuntu的零散笔记 | 2ER0 SPACETIME</title>
+  
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="default">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">2ER0 SPACETIME</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="Toggle navigation bar">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+    <a href="/about/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-bug"></i> <br />About</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-maphy">
+    <a href="/categories/maphy" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-bath"></i> <br />MaPhy</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-musik">
+    <a href="/categories/musik" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-music"></i> <br />Musik</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-saga">
+    <a href="/categories/story" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-fire"></i> <br />Saga</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-notes">
+    <a href="/categories/notes" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-terminal"></i> <br />Notes</a>
+  </li>
+
+      
+      
+    </ul>
+  
+
+  
+    
+
+  
+
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://zer0618.github.io/2010/07/30/2011-07-30-ubuntu/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="2ER0">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="2ER0 SPACETIME">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">两年ubuntu的零散笔记
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2010-07-30 07:08:27" itemprop="dateCreated datePublished" datetime="2010-07-30T07:08:27+02:00">2010-07-30</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2018-10-08 00:01:16" itemprop="dateModified" datetime="2018-10-08T00:01:16+02:00">2018-10-08</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/notes/" itemprop="url" rel="index"><span itemprop="name">notes</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+              <div class="post-description">Notes of ubuntu</div>
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="20090712（安装）"><a href="#20090712（安装）" class="headerlink" title="20090712（安装）"></a>20090712（安装）</h1><p>长春的天气很凉快，比完赛了都很轻松，明天说好去伪满皇宫玩。宿舍中间的桌子上摆了两排电脑，六个人全在玩。缠着林妹妹帮我装ubuntu，中途一边装一边看完了在火车上没看完的变形金刚2和我的女友是机器人（一直觉得这是宅男必看），不停地取笑灵魂人物，以各种姿势挤在架子床上有一句没一句的讨论剧情，很开心。<br>在此感谢林妹妹耐心地帮我把小电重新分区，重装了windows，之后又装上了Ubuntu。还要谢谢周小票的番茄花园安装盘，还有老左贡献出的看电影儿的电脑，娟儿的电影还有灵魂人物的笑话~</p>
+<p>又玩到两三点，没办法又和娟儿夜宿男寝。回家慢慢试用，可爱的Ubuntu，兴奋~</p>
+<h1 id="20090720（引导）"><a href="#20090720（引导）" class="headerlink" title="20090720（引导）"></a>20090720（引导）</h1><p>老爸拿电脑去帮我插内存，心血来潮帮我重装了windows，结果引导损坏了，学习了一下，成功修复：</p>
+<p>1、下载<a href="http://download.gna.org/grub4dos/" target="_blank" rel="noopener">grub4dos：</a>   <a href="http://download.gna.org/grubutil/" target="_blank" rel="noopener">http://download.gna.org/grubutil/</a>    </p>
+<p><a href="http://grub4dos.jot.com/WikiHome" target="_blank" rel="noopener">http://grub4dos.jot.com/WikiHome</a>   <a href="https://gna.org/projects/grub4dos/" target="_blank" rel="noopener">https://gna.org/projects/grub4dos/</a></p>
+<p>2、将grldr、grldr.mbr和grub.exe，及menu.lst解压到C盘下</p>
+<p>3、在boot.ini最后添加C:\GRLDR=”GRUB”（需去掉“隐藏受保护的系统文件”）</p>
+<p>4、重新启动电脑，选择grub。然后选择”enter command line”</p>
+<p>5、输入root (hdX,Y)。PS：root和（hdX,Y)之间是有一个空格的。hdX的这个X，是硬盘数，从零开始，如果是一个硬盘就是hd0,Y是/boot所在的分区，像我安装在sda5,这个Y就用4。如果不知道分区，find /boot/grub/stage1 寻找/boot所在分区，其实换用find /boot/grub/menu.lst也一样。这一步也可以跳过，在执行root （hdX,时连按两下Tab列出可用分区，自己确定是哪个分区。）我的/boot是单独分区在sda5的，只有一个硬盘，所以就是root (hd0,4)</p>
+<p>6、setup (hd0)</p>
+<p>7、重启（root命令是指定引导的分区，setup命令把引导信息写到硬盘MBR）</p>
+<p>原因：安装ubuntu的时候系统自动在第一个分区前写入了GRUB启动程序，但是在c盘重装xp后，xp把MBR换掉了。也就是说流氓xp未经允许把从前的GRUB删除了！用户进不了GRUB自然就启动不了ubuntu了。</p>
+<h1 id="200900803（重装）"><a href="#200900803（重装）" class="headerlink" title="200900803（重装）"></a>200900803（重装）</h1><p>决心重装，3号晚上问老左借了盘（他在望江，让室友找到盘给我送到了楼下，他们15舍我们14舍真方便，谢谢左大大和他羞涩的室友），4号晚上问小甜甜借了电脑准备出现问题随时查。</p>
+<p>重装过程挺顺的，因为有林妹妹之前弄过，分区什么的都是现成的，几乎没出现什么问题，这次算是补了一下林妹妹装时没好好看着学的课（惨痛的教训~）。又了解了一下分区以及将分区挂在系统上的特性，以下是这次装好的结果：</p>
+<p>1、MWXP（/dev/sda1)  14.7GB</p>
+<p>2、XP逻辑分区（/dev/sda2)  14.7GB</p>
+<p>3、/dev/sda5  199.3MB  ext4  /boot</p>
+<p>4、swap (/dev/sda6)  1.0GB  (swap交换分区，相当于windows的页面文件，作用是物理内存不够用的时候将一部分不常访问的数据存放的地方，相当于虚拟内存）</p>
+<p>5、/dev/sda7  5.9MB  ext4  /home</p>
+<p>6、Ubuntu 9.04 (/dev/sda8)  15.4GB  /(根）</p>
+<h1 id="20090808（文件系统）"><a href="#20090808（文件系统）" class="headerlink" title="20090808（文件系统）"></a>20090808（文件系统）</h1><p>首先，什么是文件系统及什么是日志式文件系统，个人觉得刘冲哥的这篇很清楚：<a href="http://www.linuxdiyf.com/bbs/viewthread.php?tid=149573&amp;highlight=%CE%C4%BC%FE%CF%B5%CD%B3" target="_blank" rel="noopener">Linux日志式文件系统面面观</a></p>
+<p>然后，Linux文件系统的了解，这里有一个kttlon的帖子，需要好好学习一下：<a href="http://www.linuxdiyf.com/bbs/viewthread.php?tid=101370&amp;highlight=%CE%C4%BC%FE%CF%B5%CD%B3" target="_blank" rel="noopener">Linux文件系统了解</a></p>
+<p>对于windows的FAT文件系统，我主要看了看维基的解释：<a href="http://zh.wikipedia.org/wiki/FAT" target="_blank" rel="noopener">http://zh.wikipedia.org/wiki/FAT</a></p>
+<p>专门针对ext4的介绍，个人认为这篇说的比较详细：<a href="http://haobinnan.blog.51cto.com/775253/157019" target="_blank" rel="noopener">剖析Linux扩展文件系统 ext4</a></p>
+<p>最后，还有xiaomeng姐姐的一篇Linux 与 Windows 文件系统的不同：<a href="http://www.linuxdiyf.com/bbs/viewthread.php?tid=152379&amp;highlight=%CE%C4%BC%FE%CF%B5%CD%B3" target="_blank" rel="noopener">Linux 与 Windows 文件系统的不同</a></p>
+<h1 id="200910（休眠唤醒）"><a href="#200910（休眠唤醒）" class="headerlink" title="200910（休眠唤醒）"></a>200910（休眠唤醒）</h1><p>休眠后无法唤醒问题：</p>
+<p>那要看你启动休眠时内存占用大小，如果占用比较小，可以放入swap分区，自然可以休眠成功。但是如果希望保证每次休眠都能够成功唤醒，swap最好还是和内存一样大或者比它大那么一点点。</p>
+<p><a href="http://www.douban.com/group/topic/9935767/" target="_blank" rel="noopener">http://www.douban.com/group/topic/9935767/</a></p>
+<p>这是另一个关于休眠无法唤醒问题 说是因为laptop-mode没开的问题 <a href="http://hi.baidu.com/xdavidx/blog/item/332bc903bd38237d3812bb18.html" target="_blank" rel="noopener">http://hi.baidu.com/xdavidx/blog/item/332bc903bd38237d3812bb18.html</a><br>成功</p>
+<h1 id="200910（校园网认证）"><a href="#200910（校园网认证）" class="headerlink" title="200910（校园网认证）"></a>200910（校园网认证）</h1><p>今天终于解决了ubuntu用锐捷上网的问题 先发牢骚：万恶的微软，万恶的校园网，万恶的校园网拍微软马屁的终端…</p>
+<p>试了几个没有用的，之后找到了厦大的一脚本，用这种方法 <a href="http://forum.ubuntu.org.cn/viewtopic.php?f=116&amp;t=166501&amp;view=previous" target="_blank" rel="noopener">http://forum.ubuntu.org.cn/viewtopic.php?f=116&amp;t=166501&amp;view=previous</a> 装了半天，没成功</p>
+<p>之后试了半天 终于成功了 过程如下：（<a href="http://hi.baidu.com/lmingzhi/blog/item/015f80824bb82ba60cf4d2e5.html）" target="_blank" rel="noopener">http://hi.baidu.com/lmingzhi/blog/item/015f80824bb82ba60cf4d2e5.html）</a></p>
+<p>1、下载并解压在桌面上</p>
+<p>2、安装：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sudo -s</span><br><span class="line"></span><br><span class="line">sudo <span class="built_in">cd</span> /home/scherzo/Desktop/xmuruijie-1.3.9</span><br><span class="line"></span><br><span class="line">sudo ./install.sh install</span><br></pre></td></tr></table></figure></p>
+<p>3、编辑：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">sudo gedit /etc/xmuruijie.conf</span><br><span class="line"></span><br><span class="line"><span class="comment">#this is the configuration file of XMU-Ruijie</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#parameters for authentication</span></span><br><span class="line"></span><br><span class="line">[auth]</span><br><span class="line"></span><br><span class="line">user:sb345103</span><br><span class="line"></span><br><span class="line">passwd:123456</span><br><span class="line"></span><br><span class="line">interface:eth0</span><br><span class="line"></span><br><span class="line"><span class="comment">#parameters for daemonize:</span></span><br><span class="line"></span><br><span class="line">[daemon]</span><br><span class="line"></span><br><span class="line">logfile: /var/<span class="built_in">log</span>/xmuruijie.log</span><br><span class="line"></span><br><span class="line">pid: /var/run/xmuruijie.pid</span><br></pre></td></tr></table></figure></p>
+<p>4、运行：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo /etc/init.d/xmuruijie start</span><br><span class="line"></span><br><span class="line">sudo /etc/init.d/xmuruijie stop</span><br></pre></td></tr></table></figure></p>
+<p>另一教程<a href="http://acevery.blogcs.com/2007/08/linux256xmuruijiepython_1.html" target="_blank" rel="noopener">在此：</a></p>
+<h1 id="201005"><a href="#201005" class="headerlink" title="201005"></a>201005</h1><p>10.04U盘安装</p>
+<p>syslinux： <a href="http://www.cnblogs.com/burandanxin/archive/2009/04/24/1443172.html" target="_blank" rel="noopener">http://www.cnblogs.com/burandanxin/archive/2009/04/24/1443172.html</a> 未成功 启动时提示“missing operating system</p>
+<p>ultraISO： <a href="http://bbs.season.org.cn/dispbbs.asp?BoardID=88&amp;ID=51686" target="_blank" rel="noopener">http://bbs.season.org.cn/dispbbs.asp?BoardID=88&amp;ID=51686</a> 未成功 启动时提示”boot error“</p>
+<p>晚上在A爷电脑上试 可安装</p>
+<p>以上</p>
+<h1 id="20100513"><a href="#20100513" class="headerlink" title="20100513"></a>20100513</h1><p>20100514想格了硬盘整个重装 丢了win只装Linux 看到一段话：“最好不要抱太大期望——能启动最好，不能启动也很正常，因为在这个问题上，起决定作用的不是我们的操作方法，而是硬件支持（主板，BIOS，U盘控制芯片）是否完善，我们可以试用各种方法，但并不能掌控最后结果。”泪流满面… <a href="http://forum.ubuntu.org.cn/viewtopic.php?f=77&amp;t=134270&amp;start=0" target="_blank" rel="noopener">http://forum.ubuntu.org.cn/viewtopic.php?f=77&amp;t=134270&amp;start=0</a></p>
+<p>成功！受 <a href="http://forum.ubuntu.org.cn/viewtopic.php?f=77&amp;t=256602&amp;start=0" target="_blank" rel="noopener">http://forum.ubuntu.org.cn/viewtopic.php?f=77&amp;t=256602&amp;start=0</a> 的启发 试了写入方式ZIP+格式 终于安装成功～本来已经犹豫着要整个硬盘格式化 抱着一线希望最后试了试 本以为还是黑屏“boot error”呢 进去的一刹那泪流满面呐</p>
+<h1 id="201006"><a href="#201006" class="headerlink" title="201006"></a>201006</h1><p>添加环境变量PATH<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">	$ <span class="built_in">echo</span> <span class="variable">$PATH</span></span><br><span class="line">/opt/mono/bin/:/usr/<span class="built_in">local</span>/bin:/usr/bin:/bin:/usr/X11R6/bin:/home/swaroop/bin</span><br><span class="line"></span><br><span class="line">	$ cp helloworld.py /home/swaroop/bin/helloworld</span><br></pre></td></tr></table></figure></p>
+<p>简单地把这个源文件复制到PATH所列目录之一就可以使你的程序在任何位置都可用了。</p>
+<p>也可以把你选择的目录添加到PATH变量中去——这可以通过运行set PATH $PATH:/home/scherzo/…完成但这样只能一次性添加环境变量</p>
+<p>永久性设置PATH环境变量的方法在这里：</p>
+<p><a href="http://hi.baidu.com/realvvzx/blog/item/506e1622d19237a74723e830.html" target="_blank" rel="noopener">http://hi.baidu.com/realvvzx/blog/item/506e1622d19237a74723e830.html</a></p>
+<h1 id="201010"><a href="#201010" class="headerlink" title="201010**"></a>201010**</h1><p>Mutt</p>
+<p><a href="http://xhc.me/wp-content/uploads/mutt/manual_1.5.19_zh.html" target="_blank" rel="noopener">中文手册</a></p>
+<p><a href="http://home.ustc.edu.cn/~lixuebai/GNU/MuttConfig.html" target="_blank" rel="noopener">no mailbox的解决</a></p>
+<p><a href="http://hi.baidu.com/passprot/item/1a3cf4ff9d82666a3d148521" target="_blank" rel="noopener">gmail配置</a></p>
+<p><a href="http://www.gentoo.org/doc/zh_cn/guide-to-mutt.xml" target="_blank" rel="noopener">gentoo下的详解</a></p>
+<p>tls仍未解决 无法用smstp发送 收不到可能也是这个原因</p>
+<p><a href="http://www.adamjiang.com/archives/tag/mutt" target="_blank" rel="noopener">TLS解决</a></p>
+<p>但服务器还是连接不上 该死的双重墙= =+</p>
+<p>“All mail clients suck. This one just sucks less.”</p>
+<h1 id="201011"><a href="#201011" class="headerlink" title="201011**"></a>201011**</h1><p>pdf中文显示</p>
+<p>好，你用vi打开不能正常显示中文的PDF文件后 ，先搜索“Font”看看，是不是看到了诸如“SimSun”（宋体）之类的字体跟在它们的后面</p>
+<p>于是，我们只需要做一个简单的全局替换就可以了。在vi中，你只需要输入这样的命令</p>
+<p>?View Code VIM</p>
+<p>:%s/SimSun/wqy-zenhei/g</p>
+<p>:%s/TimesNewRoman/wqy-zenhei/g</p>
+<p>其实就是把文件中所有出现的”SimSun”和”TimesNewRoman”都替换成”wqy-zenhei”（文泉驿正黑）</p>
+<p>然后保存退出，再用evince打开，是不是就可以了呢</p>
+<p><a href="http://blogold.chinaunix.net/u3/96583/showart_2279749.html" target="_blank" rel="noopener">http://blogold.chinaunix.net/u3/96583/showart_2279749.html</a></p>
+<p>无法显示问题解决如下：</p>
+<ol>
+<li><p>先安装字体</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">A.   sudo apt-get install xpdf-chinese-simplified;</span><br><span class="line"></span><br><span class="line">B. sudo apt-get install xpdf-chinese-traditional.</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>装完后打开pdf文件，中文还是不显示，继续安装：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C. sudo apt-get install poppler-data</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h1 id="201012"><a href="#201012" class="headerlink" title="201012"></a>201012</h1><p>想起以前在《geek》杂志上看到500元自己DIY一台电脑的 找来找去没找到 又想起也说过用BT盗别人无线网来着 于是决定下着玩玩</p>
+<p><a href="http://www.backtrack-linux.org/tutorials/usb-live-install/?lang=zh" target="_blank" rel="noopener">http://www.backtrack-linux.org/tutorials/usb-live-install/?lang=zh</a> U盘安装</p>
+<p><a href="http://www.hack50.com/article/sort012/sort067/info-37077.html" target="_blank" rel="noopener">http://www.hack50.com/article/sort012/sort067/info-37077.html</a>  破解无线网密码</p>
+<p><a href="http://www.hack50.com/article/sort09/sort086/info-41799.html" target="_blank" rel="noopener">http://www.hack50.com/article/sort09/sort086/info-41799.html</a>  一个简单的安全教程</p>
+<p><a href="http://www.forece.net/post/339.htm" target="_blank" rel="noopener">http://www.forece.net/post/339.htm</a>  很全的蹭网大法</p>
+<p><a href="http://shudian001.com/bbs/redirect.php?tid=193&amp;goto=lastpost" target="_blank" rel="noopener">http://shudian001.com/bbs/redirect.php?tid=193&amp;goto=lastpost</a> 试了几个方法 命令行下只有这个靠谱 算是比较成功吧至少进行下去了 但因为信号实在太差而没成功 英文参照（更靠谱些）：<a href="http://thew0rd.com/2008/08/19/tutorial-cracking-wep-using-backtrack-3/" target="_blank" rel="noopener">http://thew0rd.com/2008/08/19/tutorial-cracking-wep-using-backtrack-3/</a></p>
+<p>各种发行版</p>
+<p><a href="http://linuxtoy.org/archives/10-special-purpose-linux-distros.html" target="_blank" rel="noopener">http://linuxtoy.org/archives/10-special-purpose-linux-distros.html</a>  10个特殊用途的Linux发行版</p>
+<p><a href="http://partedmagic.com/documentation/130-creating-the-liveusb.html" target="_blank" rel="noopener">http://partedmagic.com/documentation/130-creating-the-liveusb.html</a> 系统分区Linux</p>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/linux/" rel="tag"># linux</a>
+          
+            <a href="/tags/笔记/" rel="tag"># 笔记</a>
+          
+            <a href="/tags/ubuntu/" rel="tag"># ubuntu</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2010/05/07/2010-5-07-ashampoo/" rel="next" title="湮灭算符洗发水(a^ shampoo)">
+                <i class="fa fa-chevron-left"></i> 湮灭算符洗发水(a^ shampoo)
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2011/05/13/2011-5-13-gluttony/" rel="prev" title="饿">
+                饿 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.gif"
+                alt="2ER0" />
+            
+              <p class="site-author-name" itemprop="name">2ER0</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives">
+                
+                    <span class="site-state-item-count">86</span>
+                    <span class="site-state-item-name">posts</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">7</span>
+                    <span class="site-state-item-name">categories</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">111</span>
+                    <span class="site-state-item-name">tags</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  <a href="https://twitter.com/zer0618" target="_blank" title="Twitter"><i class="fa fa-fw fa-twitter"></i>Twitter</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="https://soundcloud.com/2er0" target="_blank" title="Soundcloud"><i class="fa fa-fw fa-soundcloud"></i>Soundcloud</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="https://2er0.bandcamp.com" target="_blank" title="Bandcamp"><i class="fa fa-fw fa-bandcamp"></i>Bandcamp</a>
+                  
+                </span>
+              
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#20090712（安装）"><span class="nav-number">1.</span> <span class="nav-text">20090712（安装）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#20090720（引导）"><span class="nav-number">2.</span> <span class="nav-text">20090720（引导）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#200900803（重装）"><span class="nav-number">3.</span> <span class="nav-text">200900803（重装）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#20090808（文件系统）"><span class="nav-number">4.</span> <span class="nav-text">20090808（文件系统）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#200910（休眠唤醒）"><span class="nav-number">5.</span> <span class="nav-text">200910（休眠唤醒）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#200910（校园网认证）"><span class="nav-number">6.</span> <span class="nav-text">200910（校园网认证）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#201005"><span class="nav-number">7.</span> <span class="nav-text">201005</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#20100513"><span class="nav-number">8.</span> <span class="nav-text">20100513</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#201006"><span class="nav-number">9.</span> <span class="nav-text">201006</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#201010"><span class="nav-number">10.</span> <span class="nav-text">201010**</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#201011"><span class="nav-number">11.</span> <span class="nav-text">201011**</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#201012"><span class="nav-number">12.</span> <span class="nav-text">201012</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">2ER0</span>
+
+  
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+	
+    
+
+    
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.4.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.4.2"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.4.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.4.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.4.2"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+
+  
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

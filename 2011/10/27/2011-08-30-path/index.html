@@ -1,0 +1,1048 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html class="theme-next mist" lang="">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=6.4.2" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.4.2">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.4.2">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.4.2">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.4.2" color="#222">
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '6.4.2',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="About path int">
+<meta name="keywords" content="物理,physics,科幻,信息">
+<meta property="og:type" content="article">
+<meta property="og:title" content="蚂蚁算法1和路径积分">
+<meta property="og:url" content="http://zer0618.github.io/2011/10/27/2011-08-30-path/index.html">
+<meta property="og:site_name" content="2ER0 SPACETIME">
+<meta property="og:description" content="About path int">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-10-07T18:06:52.203Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="蚂蚁算法1和路径积分">
+<meta name="twitter:description" content="About path int">
+
+
+
+
+
+
+  <link rel="canonical" href="http://zer0618.github.io/2011/10/27/2011-08-30-path/"/>
+
+
+
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>蚂蚁算法1和路径积分 | 2ER0 SPACETIME</title>
+  
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="default">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">2ER0 SPACETIME</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="Toggle navigation bar">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+    <a href="/about/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-bug"></i> <br />About</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-maphy">
+    <a href="/categories/maphy" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-bath"></i> <br />MaPhy</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-musik">
+    <a href="/categories/musik" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-music"></i> <br />Musik</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-saga">
+    <a href="/categories/story" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-fire"></i> <br />Saga</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-notes">
+    <a href="/categories/notes" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-terminal"></i> <br />Notes</a>
+  </li>
+
+      
+      
+    </ul>
+  
+
+  
+    
+
+  
+
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://zer0618.github.io/2011/10/27/2011-08-30-path/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="2ER0">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="2ER0 SPACETIME">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">蚂蚁算法1和路径积分
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2011-10-27 18:08:27" itemprop="dateCreated datePublished" datetime="2011-10-27T18:08:27+02:00">2011-10-27</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2018-10-07 20:06:52" itemprop="dateModified" datetime="2018-10-07T20:06:52+02:00">2018-10-07</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/maphy/" itemprop="url" rel="index"><span itemprop="name">maphy</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+              <div class="post-description">About path int</div>
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>蚂蚁搜索最短路径： </p>
+<p>每只蚂蚁在群体中担任自己独立的任务，群集作为整体显现出高度的组织性。这种组织性并没有层级领导，而是通过独立个体之间的相互联系。这一点非常明显的体现在蚂蚁往返于食物源的过程。 </p>
+<p>蚂蚁通过诸如同族留下的化学信息素的踪迹来组织和保持它们食物源之间的路线。它们在行进过程中沉积了大量信息素，并且每只蚂蚁都趋向于追随有更加丰富信息素的方向。这种策略使得蚁群可以迅速找到最短路径。第一个返回的蚂蚁一般来说就是它们中的最短路径，所以这条路径第一个被两次以信息素标记（一去一返）。这样其它蚂蚁就会认为这条路径比另外没有被两次标记的更长路径更具吸引力，这就意味着这条路会被更多的信息素标记而变得拥有更强的选择优先。 </p>
+<p>不久，几乎所有的蚂蚁都会因此而选择这条路径。但是如果第一个返回的蚂蚁并不是最短路径的那个呢？计算机模拟显示，只要信息素会慢慢衰减或者蒸发，问题就可以解决。这使得保持稳定的信息素踪迹对于较长路径会更困难。 </p>
+<p>研究这项神秘的技能使研究人员能够依此开发软件来解决复杂的IT问题，比如在繁忙通讯网络中的线路改道。对撒哈拉沙漠蚂蚁归巢方式的研究也发现了同样的惊人策略，其中包括路径积分和水平投影。 </p>
+<p>路径积分： </p>
+<p>Heisenberg的矩阵力学是正则形式下经典力学的量子对应（所谓正则量子化就是把经典Poisson括号换成量子对易式）; </p>
+<p>Schrodinger的波动力学与经典力学中的Hamilton形式相关; </p>
+<p>Feynman的路径积分理论则与经典力学的Lagrange形式（通过作用量）密切相关。其优点之一是易于从非相对论形式推广到相对论形式，因为作用量是一个相对论性不变量，所以路径积分用在量子场论中非常方便;另一个优点就是把含时（time-dependent）问题和不含时（time-independent）问题纳于同一理论框架中来处理。 </p>
+<p>基本思想： </p>
+<p>粒子从A出发在B点被测到的概率P（B,A）为，对所有连续变化的路径r（t），包括从A到B的一切可能的通道，进行积分。所以叫做路径积分。 </p>
+<p>最小作用原理（第一性原理）：粒子在初终点位置相同的情况下，实际所走的轨道，与相邻的各种可能的轨道相比，其作用量取极小值： </p>
+<p>delta S = 0 </p>
+<p>粒子为什么只选择走使S取极值的路径？按照Feynman的观点，粒子走各种道路的可能性都是存在的。这不仅并不违背最小作用原理，还对其提供了更自然的说明。按照路径积分理论，从A到B的各轨道均应一视同仁（等权）地考虑，但沿不同轨道所贡献的概率波幅的相位不同，因而会导致干涉现象。这些相邻轨道的贡献，由于相干叠加（coherent superposition），将使总的概率波幅不仅不抵消，反而大大增强。这就是为什么宏观粒子总是沿最小作用原理所只是的轨道而运动的量子力学说明。 </p>
+<p>折线方案： </p>
+<p>格林函数=惠更斯原理=传播子组合规则 </p>
+<p>Huygens原理：当给了传播过程中光波的一个波前（wave front），则可以把该波前上的任何一点作为波源，它们所发出的相干的子波（wavelet）叠加起来，就可构成下一时刻的波前。 </p>
+<p>Feynman在传播子组合规则的基础上，加了一个条件：在时间很短的情况下，把所有相互作用量看作无相互作用。这就是折线方案。 </p>
+<p>于是传播子（kernel）的拉氏量可以由L（x，x^dot，t）变成： </p>
+<p>L{(x_j+1+x_j)/2, (x_j+1+x_j)/epsilon, t} </p>
+<p>的形式。</p>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/物理/" rel="tag"># 物理</a>
+          
+            <a href="/tags/physics/" rel="tag"># physics</a>
+          
+            <a href="/tags/科幻/" rel="tag"># 科幻</a>
+          
+            <a href="/tags/信息/" rel="tag"># 信息</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2011/10/24/2011-08-30-meme/" rel="next" title="meme和stand alone complex">
+                <i class="fa fa-chevron-left"></i> meme和stand alone complex
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2012/01/06/2012-01-06-n9/" rel="prev" title="九妹就是九妹 既不伟大也不卑微——新入N9各种顺手">
+                九妹就是九妹 既不伟大也不卑微——新入N9各种顺手 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.gif"
+                alt="2ER0" />
+            
+              <p class="site-author-name" itemprop="name">2ER0</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives">
+                
+                    <span class="site-state-item-count">86</span>
+                    <span class="site-state-item-name">posts</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">7</span>
+                    <span class="site-state-item-name">categories</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">111</span>
+                    <span class="site-state-item-name">tags</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  <a href="https://twitter.com/zer0618" target="_blank" title="Twitter"><i class="fa fa-fw fa-twitter"></i>Twitter</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="https://soundcloud.com/2er0" target="_blank" title="Soundcloud"><i class="fa fa-fw fa-soundcloud"></i>Soundcloud</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="https://2er0.bandcamp.com" target="_blank" title="Bandcamp"><i class="fa fa-fw fa-bandcamp"></i>Bandcamp</a>
+                  
+                </span>
+              
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">2ER0</span>
+
+  
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+	
+    
+
+    
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.4.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.4.2"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.4.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.4.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.4.2"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+
+  
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
