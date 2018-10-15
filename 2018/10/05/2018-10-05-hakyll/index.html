@@ -1,0 +1,1096 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html class="theme-next mist" lang="">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=6.4.2" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.4.2">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.4.2">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.4.2">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.4.2" color="#222">
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '6.4.2',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="New more-wiki orinted blog">
+<meta name="keywords" content="hakyll,computer">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Setup a blog with Hakyll">
+<meta property="og:url" content="http://zer0618.github.io/2018/10/05/2018-10-05-hakyll/index.html">
+<meta property="og:site_name" content="2ER0 SPACETIME">
+<meta property="og:description" content="New more-wiki orinted blog">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-10-15T22:33:29.204Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Setup a blog with Hakyll">
+<meta name="twitter:description" content="New more-wiki orinted blog">
+
+
+
+
+
+
+  <link rel="canonical" href="http://zer0618.github.io/2018/10/05/2018-10-05-hakyll/"/>
+
+
+
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>Setup a blog with Hakyll | 2ER0 SPACETIME</title>
+  
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="default">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">2ER0 SPACETIME</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="Toggle navigation bar">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+    <a href="/about/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-bug"></i> <br />About</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-maphy">
+    <a href="/categories/maphy" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-bath"></i> <br />MaPhy</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-musik">
+    <a href="/categories/musik" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-music"></i> <br />Musik</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-saga">
+    <a href="/categories/story" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-fire"></i> <br />Saga</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-notes">
+    <a href="/categories/notes" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-terminal"></i> <br />Notes</a>
+  </li>
+
+      
+      
+    </ul>
+  
+
+  
+    
+
+  
+
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://zer0618.github.io/2018/10/05/2018-10-05-hakyll/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="2ER0">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="2ER0 SPACETIME">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Setup a blog with Hakyll
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2018-10-05 01:36:45" itemprop="dateCreated datePublished" datetime="2018-10-05T01:36:45+02:00">2018-10-05</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2018-10-16 00:33:29" itemprop="dateModified" datetime="2018-10-16T00:33:29+02:00">2018-10-16</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/notes/" itemprop="url" rel="index"><span itemprop="name">notes</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+              <div class="post-description">New more-wiki orinted blog</div>
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>Reference:<br><a href="http://jaspervdj.be/hakyll/" target="_blank" rel="noopener">Hakyll</a>. And it’s using<br><a href="http://johnmacfarlane.net/pandoc/" target="_blank" rel="noopener">Pandoc</a> library that<br>can convert documents between different formats.</p>
+<h2 id="Install"><a href="#Install" class="headerlink" title="Install"></a>Install</h2><p><a href="http://jaspervdj.be/hakyll/tutorials/01-installation.html" target="_blank" rel="noopener">Hakyll Website</a>:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Create the skeleton website</span></span><br><span class="line">$ stack install --only-dependencies</span><br><span class="line">$ hakyll-init site</span><br><span class="line">$ <span class="built_in">cd</span> site</span><br><span class="line"></span><br><span class="line"><span class="comment"># Generate the website</span></span><br><span class="line">$ stack build</span><br><span class="line">$ stack <span class="built_in">exec</span> site build</span><br><span class="line"></span><br><span class="line"><span class="comment"># Preview</span></span><br><span class="line">$ ./site watch</span><br></pre></td></tr></table></figure>
+<h2 id="Code-Highlighting"><a href="#Code-Highlighting" class="headerlink" title="Code Highlighting"></a>Code Highlighting</h2><p>Change the CSS/defaut to use pre-generated CSS from Pandoc to do syntax highlighting:</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">code</span> &#123;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">14px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="number">#f9f8fa</span>;</span><br><span class="line">    <span class="attribute">line-height</span>: <span class="number">100%</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">pre</span> &#123;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="number">#f9f8fa</span>;</span><br><span class="line">    <span class="attribute">border</span>: <span class="number">2px</span> solid <span class="number">#bbb</span>;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">6px</span> <span class="number">10px</span>;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">5px</span>;</span><br><span class="line">    <span class="attribute">overflow-x</span>: auto;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">/* Generated by pandoc. */</span></span><br><span class="line"><span class="selector-tag">table</span><span class="selector-class">.sourceCode</span>, <span class="selector-tag">tr</span><span class="selector-class">.sourceCode</span>, <span class="selector-tag">td</span><span class="selector-class">.lineNumbers</span>, <span class="selector-tag">td</span><span class="selector-class">.sourceCode</span>, <span class="selector-tag">table</span><span class="selector-class">.sourceCode</span> <span class="selector-tag">pre</span></span><br><span class="line">   &#123;</span><br><span class="line">       <span class="attribute">margin</span>: <span class="number">0</span>;</span><br><span class="line">       <span class="attribute">padding</span>: <span class="number">0</span>;</span><br><span class="line">       <span class="attribute">border</span>: <span class="number">0</span>;</span><br><span class="line">       <span class="attribute">vertical-align</span>: baseline;</span><br><span class="line">       <span class="attribute">border</span>: none;</span><br><span class="line">   &#125;</span><br><span class="line"><span class="selector-tag">td</span><span class="selector-class">.lineNumbers</span> &#123;</span><br><span class="line">    <span class="attribute">border-right</span>: <span class="number">1px</span> solid <span class="number">#AAAAAA</span>;</span><br><span class="line">    <span class="attribute">text-align</span>: right; <span class="attribute">color</span>: <span class="number">#AAAAAA</span>;</span><br><span class="line">    <span class="attribute">padding-right</span>: <span class="number">5px</span>;</span><br><span class="line">    <span class="attribute">padding-left</span>: <span class="number">5px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">td</span><span class="selector-class">.sourceCode</span> &#123; <span class="attribute">padding-left</span>: <span class="number">5px</span>; &#125;</span><br><span class="line"><span class="selector-class">.sourceCode</span> <span class="selector-tag">span</span><span class="selector-class">.kw</span> &#123; <span class="attribute">color</span>: <span class="number">#007020</span>; <span class="attribute">font-weight</span>: bold; &#125;</span><br><span class="line"><span class="selector-class">.sourceCode</span> <span class="selector-tag">span</span><span class="selector-class">.dt</span> &#123; <span class="attribute">color</span>: <span class="number">#902000</span>; &#125;</span><br><span class="line"><span class="selector-class">.sourceCode</span> <span class="selector-tag">span</span><span class="selector-class">.dv</span> &#123; <span class="attribute">color</span>: <span class="number">#40a070</span>; &#125;</span><br><span class="line"><span class="selector-class">.sourceCode</span> <span class="selector-tag">span</span><span class="selector-class">.bn</span> &#123; <span class="attribute">color</span>: <span class="number">#40a070</span>; &#125;</span><br><span class="line"><span class="selector-class">.sourceCode</span> <span class="selector-tag">span</span><span class="selector-class">.fl</span> &#123; <span class="attribute">color</span>: <span class="number">#40a070</span>; &#125;</span><br><span class="line"><span class="selector-class">.sourceCode</span> <span class="selector-tag">span</span><span class="selector-class">.ch</span> &#123; <span class="attribute">color</span>: <span class="number">#4070a0</span>; &#125;</span><br><span class="line"><span class="selector-class">.sourceCode</span> <span class="selector-tag">span</span><span class="selector-class">.st</span> &#123; <span class="attribute">color</span>: <span class="number">#4070a0</span>; &#125;</span><br><span class="line"><span class="selector-class">.sourceCode</span> <span class="selector-tag">span</span><span class="selector-class">.co</span> &#123; <span class="attribute">color</span>: <span class="number">#60a0b0</span>; <span class="attribute">font-style</span>: italic; &#125;</span><br><span class="line"><span class="selector-class">.sourceCode</span> <span class="selector-tag">span</span><span class="selector-class">.ot</span> &#123; <span class="attribute">color</span>: <span class="number">#007020</span>; &#125;</span><br><span class="line"><span class="selector-class">.sourceCode</span> <span class="selector-tag">span</span><span class="selector-class">.al</span> &#123; <span class="attribute">color</span>: red; <span class="attribute">font-weight</span>: bold; &#125;</span><br><span class="line"><span class="selector-class">.sourceCode</span> <span class="selector-tag">span</span><span class="selector-class">.fu</span> &#123; <span class="attribute">color</span>: <span class="number">#06287e</span>; &#125;</span><br><span class="line"><span class="selector-class">.sourceCode</span> <span class="selector-tag">span</span><span class="selector-class">.re</span> &#123; &#125;</span><br><span class="line"><span class="selector-class">.sourceCode</span> <span class="selector-tag">span</span><span class="selector-class">.er</span> &#123; <span class="attribute">color</span>: red; <span class="attribute">font-weight</span>: bold; &#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Math"><a href="#Math" class="headerlink" title="Math"></a>Math</h2><p>Mostly followed this<br><a href="http://travis.athougies.net/posts/2013-08-13-using-math-on-your-hakyll-blog.html" target="_blank" rel="noopener">blog</a> post.</p>
+<p>Write the <code>site.hs</code> file at the import module block:</p>
+<figure class="highlight haskell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="keyword">qualified</span> Data.Set <span class="keyword">as</span> S</span><br><span class="line"><span class="keyword">import</span>           Text.Pandoc.Options</span><br></pre></td></tr></table></figure>
+<p>here it’s needed to tell the <code>pages-hakyll.cabal</code> that we added depends</p>
+<figure class="highlight haskell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">executable</span> site</span><br><span class="line"> main-is: site.hs</span><br><span class="line"> build-depends: base == <span class="number">4.</span>*, hakyll == <span class="number">4.9</span>.*, pandoc, containers</span><br><span class="line"> ghc-options: -threaded</span><br><span class="line"> <span class="keyword">default</span>-language: <span class="type">Haskell2010</span></span><br></pre></td></tr></table></figure>
+<p>Creat the compiler <code>pandocMathCompiler</code></p>
+<figure class="highlight haskell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">pandocMathCompiler</span> =</span><br><span class="line">    <span class="keyword">let</span> mathExtensions = [<span class="type">Ext_tex_math_dollars</span>, <span class="type">Ext_tex_math_double_backslash</span>,</span><br><span class="line">                          <span class="type">Ext_latex_macros</span>]</span><br><span class="line">        defaultExtensions = writerExtensions defaultHakyllWriterOptions</span><br><span class="line">        newExtensions = foldr <span class="type">S</span>.insert defaultExtensions mathExtensions</span><br><span class="line">        writerOptions = defaultHakyllWriterOptions &#123;</span><br><span class="line">                          writerExtensions = newExtensions,</span><br><span class="line">                          writerHTMLMathMethod = <span class="type">MathJax</span> <span class="string">""</span></span><br><span class="line">                        &#125;</span><br><span class="line">    <span class="keyword">in</span> pandocCompilerWith defaultHakyllReaderOptions writerOptions</span><br></pre></td></tr></table></figure>
+<p>Add the Mathjax in the template <code>default.html</code>:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span></span></span><br><span class="line"><span class="tag">        <span class="attr">src</span>=<span class="string">"http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>Math test:</p>
+<p>$E = mc^2$</p>
+<p>$$\Delta_A(\lambda)=\det(\lambda I-A)$$</p>
+<p>\begin{aligned}<br>\dot{x} &amp; = \sigma(y-x) \\<br>\dot{y} &amp; = -\beta z + xy<br>\end{aligned}</p>
+<h2 id="Add-tags"><a href="#Add-tags" class="headerlink" title="Add tags"></a>Add tags</h2><p>This <a href="http://javran.github.io/posts/2014-03-01-add-tags-to-your-hakyll-blog.html" target="_blank" rel="noopener">blog</a> shows the steps.</p>
+<p>Change the <code>site.hs</code></p>
+<figure class="highlight haskell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">    <span class="comment">-- build up tags</span></span><br><span class="line">    tags &lt;- buildTags <span class="string">"posts/*"</span> (fromCapture <span class="string">"tags/*.html"</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment">-- generate tag page</span></span><br><span class="line">    tagsRules tags $ \tag pattern -&gt; <span class="keyword">do</span></span><br><span class="line">        <span class="keyword">let</span> title = <span class="string">"Posts tagged \""</span> ++ tag ++ <span class="string">"\""</span></span><br><span class="line">        route idRoute</span><br><span class="line">        compile $ <span class="keyword">do</span></span><br><span class="line">            posts &lt;- recentFirst =&lt;&lt; loadAll pattern</span><br><span class="line">            <span class="keyword">let</span> ctx = constField <span class="string">"title"</span> title</span><br><span class="line">                      `mappend` listField <span class="string">"posts"</span> postCtx (return posts)</span><br><span class="line">                      `mappend` defaultContext</span><br><span class="line"></span><br><span class="line">            makeItem <span class="string">""</span></span><br><span class="line">                &gt;&gt;= loadAndApplyTemplate <span class="string">"templates/tag.html"</span> ctx</span><br><span class="line">                &gt;&gt;= loadAndApplyTemplate <span class="string">"templates/default.html"</span> ctx</span><br><span class="line">                &gt;&gt;= relativizeUrls</span><br><span class="line"></span><br><span class="line">    match <span class="string">"posts/*"</span> $ <span class="keyword">do</span></span><br><span class="line">        route $ setExtension <span class="string">"html"</span></span><br><span class="line">        compile $ pandocCompiler</span><br><span class="line">            &gt;&gt;= loadAndApplyTemplate <span class="string">"templates/post.html"</span>    (postCtxWithTags tags)</span><br><span class="line">            &gt;&gt;= loadAndApplyTemplate <span class="string">"templates/default.html"</span> (postCtxWithTags tags)</span><br><span class="line">            &gt;&gt;= relativizeUrls</span><br><span class="line"></span><br><span class="line"><span class="comment">-------- after the postCtx --------</span></span><br><span class="line"></span><br><span class="line"><span class="title">postCtxWithTags</span> :: <span class="type">Tags</span> -&gt; <span class="type">Context</span> <span class="type">String</span></span><br><span class="line"><span class="title">postCtxWithTags</span> tags = tagsField <span class="string">"tags"</span> tags `mappend` postCtx</span><br></pre></td></tr></table></figure>
+<p>also need to change <code>template/post.html</code> and create a tag page <code>template/tag.html</code>.</p>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/hakyll/" rel="tag"># hakyll</a>
+          
+            <a href="/tags/computer/" rel="tag"># computer</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/10/05/2018-10-05-brot/" rel="next" title="Brot">
+                <i class="fa fa-chevron-left"></i> Brot
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/10/08/2018-10-06-mathtest (copy 1)/" rel="prev" title="Mathtext2">
+                Mathtext2 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.gif"
+                alt="2ER0" />
+            
+              <p class="site-author-name" itemprop="name">2ER0</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives">
+                
+                    <span class="site-state-item-count">87</span>
+                    <span class="site-state-item-name">posts</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">7</span>
+                    <span class="site-state-item-name">categories</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">112</span>
+                    <span class="site-state-item-name">tags</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  <a href="https://twitter.com/zer0618" target="_blank" title="Twitter"><i class="fa fa-fw fa-twitter"></i>Twitter</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="https://soundcloud.com/2er0" target="_blank" title="Soundcloud"><i class="fa fa-fw fa-soundcloud"></i>Soundcloud</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="https://2er0.bandcamp.com" target="_blank" title="Bandcamp"><i class="fa fa-fw fa-bandcamp"></i>Bandcamp</a>
+                  
+                </span>
+              
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Install"><span class="nav-number">1.</span> <span class="nav-text">Install</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Code-Highlighting"><span class="nav-number">2.</span> <span class="nav-text">Code Highlighting</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Math"><span class="nav-number">3.</span> <span class="nav-text">Math</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Add-tags"><span class="nav-number">4.</span> <span class="nav-text">Add tags</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">2ER0</span>
+
+  
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+	
+    
+
+    
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.4.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.4.2"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.4.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.4.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.4.2"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+
+  
+    
+      <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      },
+      TeX: {equationNumbers: { autoNumber: "AMS" }}
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/mathjax@2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    
+  
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
